@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crm_custom_view_res_partner_filter" model="ir.ui.view">
+        <field name="name">crm_custom_view_res_partner_filter</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="mobile"
+                    filter_domain="[('mobile','ilike',self)]"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

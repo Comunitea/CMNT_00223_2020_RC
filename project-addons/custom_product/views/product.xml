@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="custom_product_product_template_only_form_view" model="ir.ui.view">
+        <field name="name">custom.product.product.template.only.form.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <field name="default_code" position="replace">
+            </field>
+            <xpath expr="//div[@name='options']" position="before">
+                <label class="oe_edit_only" for="default_code" string="Default Code"/>
+                <h2><field name="default_code"/></h2>
+            </xpath>
+            <field name="barcode" position="after">
+                <field name="uses"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="custom_product_product_template_tree_view" model="ir.ui.view">
+        <field name="name">custom.product.product.template.tree.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="uses" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="custom_product_product_template_search_view" model="ir.ui.view">
+        <field name="name">custom.product.product.template.search.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="uses" string="Uses" filter_domain="[('uses', 'ilike', self)]"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="custom_product_product_normal_form_view" model="ir.ui.view">
+        <field name="name">custom.product.product.normal.form.view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <field name="default_code" position="replace">
+            </field>
+            <xpath expr="//div[@name='options']" position="before">
+                <label class="oe_edit_only" for="default_code" string="Default Code"/>
+                <h2><field name="default_code"/></h2>
+            </xpath>
+            <field name="barcode" position="after">
+                <field name="uses"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
