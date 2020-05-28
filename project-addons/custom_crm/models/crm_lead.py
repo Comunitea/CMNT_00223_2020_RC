@@ -29,8 +29,4 @@ class CrmLead(models.Model):
     partner_ref = fields.Char(string="Partner Reference", related="partner_id.ref")    
     partner_category_id = fields.Many2many('res.partner.category', column1='partner_id',
                                     column2='category_id', string='Partner Tags', related="partner_id.category_id")
-    partner_image_small = fields.Binary(related="partner_id.image_small")
-    partner_parent_id = fields.Many2one('res.partner', string='Related Company', related="partner_id.parent_id")
-    partner_is_company = fields.Boolean(string='Is a Company', related="partner_id.is_company")
-    partner_type = fields.Selection(related="partner_id.type")
-    partner_display_name = fields.Char(related="partner_id.display_name")
+    image = fields.Binary(string="Lead Image")
