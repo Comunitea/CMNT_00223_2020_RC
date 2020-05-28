@@ -24,12 +24,12 @@ from odoo import api, fields, models, _
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    uses = fields.Char('Product Uses')
-    references = fields.Char('References')
+    uses = fields.Text('Product Uses')
+    references = fields.Text('References')
 
 
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
-    uses = fields.Char('Product Uses')
-    references = fields.Char('References')
+    uses = fields.Text('Product Uses')
+    references = fields.Text('References')
