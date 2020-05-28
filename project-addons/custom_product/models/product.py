@@ -25,9 +25,11 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     uses = fields.Char('Product Uses')
+    references = fields.Char('References')
 
 
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
     uses = fields.Char('Product Uses')
+    references = fields.Char('References')
