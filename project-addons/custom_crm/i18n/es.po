@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* custom_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-28 07:21+0000\n"
+"PO-Revision-Date: 2020-05-28 07:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_crm
+#: model_terms:ir.ui.view,arch_db:custom_crm.crm_custom_crm_case_kanban_view_leads
+msgid "<i class=\"fa fa-comments\" aria-label=\"Messages\" role=\"img\"/>"
+msgstr "<i class=\"fa fa-comments\" aria-label=\"Mensajes\" role=\"img\"/>"
+
+#. module: custom_crm
+#: model:ir.model.fields,field_description:custom_crm.field_crm_lead__partner_type
+msgid "Address Type"
+msgstr "Tipo de dirección"
+
+#. module: custom_crm
+#: model_terms:ir.ui.view,arch_db:custom_crm.crm_custom_crm_case_kanban_view_leads
+msgid "Avatar"
+msgstr ""
+
+#. module: custom_crm
+#: model:ir.model.fields,help:custom_crm.field_crm_lead__partner_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Marque esta casilla si el contacto es una compañía. En caso contrario, es una persona."
+
+#. module: custom_crm
+#: model:ir.model,name:custom_crm.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: custom_crm
+#: model_terms:ir.ui.view,arch_db:custom_crm.crm_custom_crm_case_kanban_view_leads
+msgid "Delivery"
+msgstr "Entrega"
+
+#. module: custom_crm
+#: model:ir.model.fields,field_description:custom_crm.field_crm_lead__partner_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: custom_crm
+#: model_terms:ir.ui.view,arch_db:custom_crm.crm_custom_crm_case_kanban_view_leads
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: custom_crm
+#: model:ir.model.fields,field_description:custom_crm.field_crm_lead__partner_is_company
+msgid "Is a Company"
+msgstr "Es una compañia"
+
+#. module: custom_crm
+#: model:ir.model,name:custom_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: custom_crm
+#: model_terms:ir.ui.view,arch_db:custom_crm.crm_custom_crm_case_kanban_view_leads
+msgid "Logo"
+msgstr ""
+
+#. module: custom_crm
+#: model:ir.model.fields,field_description:custom_crm.field_crm_lead__partner_ref
+msgid "Partner Reference"
+msgstr "Referencia del cliente"
+
+#. module: custom_crm
+#: model:ir.model.fields,field_description:custom_crm.field_crm_lead__partner_category_id
+msgid "Partner Tags"
+msgstr "Etiquetas del cliente"
+
+#. module: custom_crm
+#: model:ir.model.fields,field_description:custom_crm.field_crm_lead__partner_parent_id
+msgid "Related Company"
+msgstr "Empresa relacionada"
+
+#. module: custom_crm
+#: model:ir.model.fields,field_description:custom_crm.field_crm_lead__partner_image_small
+msgid "Small-sized image"
+msgstr "Imagen de tamaño pequeño"
+
+#. module: custom_crm
+#: model:ir.model.fields,help:custom_crm.field_crm_lead__partner_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Imagen de tamaño pequeño de este contacto. Se redimensiona automáticamente a 64x64 px, con el ratio de aspecto preservado. Use este campo donde se requiera una imagen pequeña."
+
+#. module: custom_crm
+#: model_terms:ir.ui.view,arch_db:custom_crm.crm_custom_crm_case_kanban_view_leads
+msgid "Unread Messages"
+msgstr "Mensajes por leer"
+
+#. module: custom_crm
+#: model:ir.model.fields,help:custom_crm.field_crm_lead__partner_type
+msgid "Used by Sales and Purchase Apps to select the relevant address depending on the context."
+msgstr "Usado por aplicaciones de Ventas/Compras para seleccionar la dirección relevante dependendiendo del contexto."
+
