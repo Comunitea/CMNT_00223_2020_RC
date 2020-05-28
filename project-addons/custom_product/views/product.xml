@@ -14,6 +14,7 @@
             </xpath>
             <field name="barcode" position="after">
                 <field name="uses"/>
+                <field name="references"/>
             </field>
         </field>
     </record>
@@ -36,6 +37,7 @@
         <field name="arch" type="xml">
             <field name="name" position="after">
                 <field name="uses" string="Uses" filter_domain="[('uses', 'ilike', self)]"/>
+                <field name="references" string="References" filter_domain="[('references', 'ilike', self)]"/>
             </field>
         </field>
     </record>
@@ -53,6 +55,7 @@
             </xpath>
             <field name="barcode" position="after">
                 <field name="uses"/>
+                <field name="references"/>
             </field>
         </field>
     </record>
