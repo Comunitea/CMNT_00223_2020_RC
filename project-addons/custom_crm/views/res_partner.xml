@@ -34,4 +34,15 @@
         </field>
     </record>
 
+    <record id="custom_res_partner_tree_view" model="ir.ui.view">
+        <field name="name">custom.res.partner.tree.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="ref"/>
+            </field>
+        </field>
+    </record>
+
 </odoo>
