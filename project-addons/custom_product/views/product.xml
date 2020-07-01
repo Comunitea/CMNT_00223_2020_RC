@@ -71,16 +71,16 @@
                 <field name="uses"/>
             </field>
             <field name="lst_price" position="attributes">
-                <attribute name="attrs">{'invisible': True}</attribute>
+                <attribute name="invisible">1</attribute>
             </field>
             <field name="standard_price" position="attributes">
-                <attribute name="attrs">{'invisible': True}</attribute>
+                <attribute name="invisible">1</attribute>
             </field>
             <field name="barcode" position="attributes">
-                <attribute name="attrs">{'invisible': True}</attribute>
+                <attribute name="invisible">1</attribute>
             </field>
             <field name="attribute_value_ids" position="attributes">
-                <attribute name="attrs">{'invisible': True}</attribute>
+                <attribute name="invisible">1</attribute>
             </field>
             <field name="barcode" position="after">
                 <field name="description" />
