@@ -60,4 +60,32 @@
         </field>
     </record>
 
+    <record id="custom_product_product_tree_view" model="ir.ui.view">
+        <field name="name">custom.product.product.tree.view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="categ_id" />
+                <field name="references" />
+                <field name="uses"/>
+            </field>
+            <field name="lst_price" position="attributes">
+                <attribute name="attrs">{'invisible': True}</attribute>
+            </field>
+            <field name="standard_price" position="attributes">
+                <attribute name="attrs">{'invisible': True}</attribute>
+            </field>
+            <field name="barcode" position="attributes">
+                <attribute name="attrs">{'invisible': True}</attribute>
+            </field>
+            <field name="attribute_value_ids" position="attributes">
+                <attribute name="attrs">{'invisible': True}</attribute>
+            </field>
+            <field name="barcode" position="after">
+                <field name="description" />
+            </field>
+        </field>
+    </record>
+
 </odoo>
