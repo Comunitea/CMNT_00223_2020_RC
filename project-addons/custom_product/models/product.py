@@ -31,5 +31,5 @@ class ProductTemplate(models.Model):
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
-    uses = fields.Text('Product Uses')
-    references = fields.Text('References')
+    #uses = fields.Text('Product Uses')
+    #references = fields.Text('References')
