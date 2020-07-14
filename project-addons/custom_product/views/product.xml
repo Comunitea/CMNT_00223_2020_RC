@@ -35,7 +35,21 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_search_view"/>
         <field name="arch" type="xml">
-            <field name="name" position="after">
+            <field name="name" position="replace">
+                <field name="name" string="Product" filter_domain="['|', '|', '|', '|', '|', ('default_code', 'ilike', self), ('name', 'ilike', self), ('barcode', 'ilike', self),('uses', 'ilike', self), ('references', 'ilike', self), ('description', 'ilike', self)]"/>
+                <field name="uses" string="Uses" filter_domain="[('uses', 'ilike', self)]"/>
+                <field name="references" string="References" filter_domain="[('references', 'ilike', self)]"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="custom_product_product_search_view" model="ir.ui.view">
+        <field name="name">custom.product.product.search.view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_search_form_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="replace">
+                <field name="name" string="Product" filter_domain="['|', '|', '|', '|', '|', ('default_code', 'ilike', self), ('name', 'ilike', self), ('barcode', 'ilike', self),('uses', 'ilike', self), ('references', 'ilike', self), ('description', 'ilike', self)]"/>
                 <field name="uses" string="Uses" filter_domain="[('uses', 'ilike', self)]"/>
                 <field name="references" string="References" filter_domain="[('references', 'ilike', self)]"/>
             </field>

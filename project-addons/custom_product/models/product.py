@@ -27,9 +27,43 @@ class ProductTemplate(models.Model):
     uses = fields.Text('Product Uses')
     references = fields.Text('References')
 
+    @api.model
+    def _name_search(self, name='', args=None, operator='ilike', limit=100,
+                     name_get_uid=None):
+        print("NAME SEARCH")
+        res = super()._name_search(
+            name, args=args, operator=operator, limit=limit,
+            name_get_uid=name_get_uid)
+        print(name)
+        if name:
+            tmpl_product_ids = self._search(
+                ['|', '|', ('uses', operator, name),
+                ('references', operator, name),
+                ('description', operator, name)], limit=limit,
+                access_rights_uid=name_get_uid)
+            print(tmpl_product_ids)
+            res.extend(self.browse(tmpl_product_ids).name_get())
+        return res
+
 
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
-    #uses = fields.Text('Product Uses')
-    #references = fields.Text('References')
+    
+    @api.model
+    def _name_search(self, name='', args=None, operator='ilike', limit=100,
+                     name_get_uid=None):
+        print("NAME SEARCH")
+        res = super()._name_search(
+            name, args=args, operator=operator, limit=limit,
+            name_get_uid=name_get_uid)
+        print(name)
+        if name:
+            product_ids = self._search(
+                ['|', '|', ('uses', operator, name),
+                ('references', operator, name),
+                ('description', operator, name)], limit=limit,
+                access_rights_uid=name_get_uid)
+            print(product_ids)
+            res.extend(self.browse(product_ids).name_get())
+        return res
